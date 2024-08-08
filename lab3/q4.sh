@@ -1,5 +1,5 @@
-# Find the factorial of a given number
-#!/bin/bash
+## Find the factorial of a given number
+
 
 echo "Enter the number: "
 read n
