@@ -1,5 +1,5 @@
-# Find whether the given number is even or odd.
-#!/bin/bash
+## Find whether the given number is even or odd.
+
 
 echo "Enter the number: "
 read n
