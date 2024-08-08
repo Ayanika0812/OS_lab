@@ -1,5 +1,5 @@
-# Print the first ‘n’ odd numbers.
-#!/bin/bash
+## Print the first ‘n’ odd numbers.
+
 
 echo "Enter value of n:"
 read n
