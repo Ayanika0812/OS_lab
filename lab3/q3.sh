@@ -1,5 +1,5 @@
-# Find all the possible quadratic equation roots using case.
-#!/bin/bash
+## Find all the possible quadratic equation roots using case.
+
 
 echo "Enter the value of a:"
 read a
