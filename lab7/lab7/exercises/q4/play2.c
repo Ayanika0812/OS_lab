@@ -1,4 +1,3 @@
-// player2.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,9 +33,11 @@ int main() {
         display_board(shared_stuff->board);
 
         // Wait for Player 2's turn
-        while (shared_stuff->turn != 1) {
+        while (shared_stuff->turn != 1 && !shared_stuff->game_over) {
             sleep(1);
         }
+
+        if (shared_stuff->game_over) break;
 
         // Get Player 2's move
         int move;
@@ -74,4 +75,3 @@ int main() {
 
     return 0;
 }
-
