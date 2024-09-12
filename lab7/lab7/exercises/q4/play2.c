@@ -75,3 +75,57 @@ int main() {
 
     return 0;
 }
+
+
+
+/* output 
+
+./p2
+
+   |   |   
+---|---|---
+   |   |   
+---|---|---
+   |   |   
+
+Player 2 (O), enter your move (1-9): 5
+Invalid move. Try again.
+
+   |   |   
+---|---|---
+   | X |   
+---|---|---
+   |   |   
+
+Player 2 (O), enter your move (1-9): 8
+
+   |   |   
+---|---|---
+   | X |   
+---|---|---
+   | O |   
+
+Player 2 (O), enter your move (1-9): 9
+
+ X |   |   
+---|---|---
+   | X |   
+---|---|---
+   | O | O 
+
+Player 2 (O), enter your move (1-9): 4
+
+ X | X |   
+---|---|---
+ O | X |   
+---|---|---
+   | O | O 
+
+
+ X | X | X 
+---|---|---
+ O | X |   
+---|---|---
+   | O | O 
+
+*/
