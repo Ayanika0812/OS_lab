@@ -1,4 +1,3 @@
-// player1.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,9 +38,11 @@ int main() {
         display_board(shared_stuff->board);
 
         // Wait for Player 1's turn
-        while (shared_stuff->turn != 0) {
+        while (shared_stuff->turn != 0 && !shared_stuff->game_over) {
             sleep(1);
         }
+
+        if (shared_stuff->game_over) break;
 
         // Get Player 1's move
         int move;
@@ -59,21 +60,10 @@ int main() {
         shared_stuff->turn = 1; // Switch turn to Player 2
 
         // Check for a win
-        for (int i = 0; i < 3; i++) {
-            if ((shared_stuff->board[i * 3] == 'X' && shared_stuff->board[i * 3 + 1] == 'X' && shared_stuff->board[i * 3 + 2] == 'X') ||
-                (shared_stuff->board[i] == 'X' && shared_stuff->board[i + 3] == 'X' && shared_stuff->board[i + 6] == 'X')) {
-                printf("Player 1 (X) wins!\n");
-                shared_stuff->game_over = 1;
-                break;
-            }
-        }
-        if ((shared_stuff->board[0] == 'X' && shared_stuff->board[4] == 'X' && shared_stuff->board[8] == 'X') ||
-            (shared_stuff->board[2] == 'X' && shared_stuff->board[4] == 'X' && shared_stuff->board[6] == 'X')) {
+        if (check_winner(shared_stuff->board, 'X')) {
             printf("Player 1 (X) wins!\n");
             shared_stuff->game_over = 1;
-        }
-        // Check for draw
-        if (strchr(shared_stuff->board, ' ') == NULL && !shared_stuff->game_over) {
+        } else if (strchr(shared_stuff->board, ' ') == NULL) {
             printf("It's a draw!\n");
             shared_stuff->game_over = 1;
         }
@@ -90,4 +80,3 @@ int main() {
 
     return 0;
 }
-
