@@ -80,3 +80,58 @@ int main() {
 
     return 0;
 }
+
+
+
+/* output :
+
+./p1
+
+   |   |   
+---|---|---
+   |   |   
+---|---|---
+   |   |   
+
+Player 1 (X), enter your move (1-9): 5
+
+   |   |   
+---|---|---
+   | X |   
+---|---|---
+   |   |   
+
+Player 1 (X), enter your move (1-9): 0
+Invalid move. Try again.
+
+   |   |   
+---|---|---
+   | X |   
+---|---|---
+   | O |   
+
+Player 1 (X), enter your move (1-9): 1
+
+ X |   |   
+---|---|---
+   | X |   
+---|---|---
+   | O |   
+
+Player 1 (X), enter your move (1-9): 2
+
+ X | X |   
+---|---|---
+   | X |   
+---|---|---
+   | O | O 
+
+Player 1 (X), enter your move (1-9): 3
+Player 1 (X) wins!
+
+ X | X | X 
+---|---|---
+ O | X |   
+---|---|---
+   | O | O 
+*/
