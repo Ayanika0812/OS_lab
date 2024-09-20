@@ -116,6 +116,36 @@ int main() {
 
 
 /*
+//best
+
+/q1
+Enter allocation policy (first/best/worst/next) or 'exit' to quit: best
+Enter size to allocate: 20
+Allocated 20 bytes at offset 0
+Offset: 0, Size: 20, Allocated: 1
+Offset: 20, Size: 1004, Allocated: 0
+Do you want to free a block? (y/n): n
+Enter allocation policy (first/best/worst/next) or 'exit' to quit: best
+Enter size to allocate: 30
+Allocated 30 bytes at offset 20
+Offset: 0, Size: 20, Allocated: 1
+Offset: 20, Size: 30, Allocated: 1
+Offset: 50, Size: 974, Allocated: 0
+Do you want to free a block? (y/n): y
+Enter offset to free: 20
+Freed memory at offset 20
+Enter allocation policy (first/best/worst/next) or 'exit' to quit: best
+Enter size to allocate: 20
+Allocated 20 bytes at offset 20
+Offset: 0, Size: 20, Allocated: 1
+Offset: 20, Size: 20, Allocated: 1
+Offset: 40, Size: 10, Allocated: 0
+Offset: 50, Size: 974, Allocated: 0
+Do you want to free a block? (y/n): 
+
+
+
+
 
 
 /q1
