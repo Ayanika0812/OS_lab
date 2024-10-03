@@ -110,3 +110,12 @@ int main() {
     free(q1); free(q2); free(q3);
     return 0;
 }
+/*./a.out
+Enter number of processes: 3
+Enter burst time and arrival time for process 1: 3 1
+Enter burst time and arrival time for process 2: 4 2
+Enter burst time and arrival time for process 3: 2 0
+Process 1 finished at time 3
+Process 3 finished at time 8
+Process 2 finished at time 9
+*/
